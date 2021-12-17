@@ -8,15 +8,18 @@ import  StorefrontIcon from '@material-ui/icons/Storefront';
 import  VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import  ExpandMoreOutlineIcon from '@material-ui/icons/ExpandMoreOutlined';
 import  RedCross from '@material-ui/icons/LocalHospital';
+import {useStateValue} from "./StateProvider";
+
 
 function Sidebar() {
+
+   // eslint-disable-next-line   
+  const [{user}, dispatch] = useStateValue();
+
     return (
         <div className="sidebar">
-            <SidebarRow src="https://upload.wikimedia.org/
-                        wikipedia/commons/thumb/0/05/Facebook_Logo_
-                        %282019%29.png/1200px-Facebook_Logo_%2820
-                        19%29.png" 
-                        title="Mazin"/>
+            <SidebarRow src={user.photoURL} 
+                        title={user.displayName}/>
             <SidebarRow Icon={RedCross} title="Covid-19 updates"/>
             <SidebarRow Icon={EmojiFlagIcon} title="pages"/>
             <SidebarRow Icon={PeopleIcon} title="Friends"/>

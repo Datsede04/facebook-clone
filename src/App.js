@@ -5,9 +5,12 @@ import Feed from './Feed';
 import Widgits from './Widgits';
 import './App.css';
 import Login from "./Login";
+import {useStateValue} from "./StateProvider";
 
 function App() {
-  const user =null;
+   // eslint-disable-next-line 
+  const [{user}, dispatch] = useStateValue();
+  
   return (
     // BEM naming convention
   
