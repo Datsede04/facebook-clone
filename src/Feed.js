@@ -25,7 +25,7 @@ function Feed() {
 
                 <Post
                     keyid={post.data.id}
-                    message={post.data.message?? post.data.messasge}
+                    message={post.data.message|| post.data.messasge}
                     timestamp={post.data.timestamp}
                     username={post.data.username}
                     image={post.data.image} 
