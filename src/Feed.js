@@ -14,7 +14,8 @@ function Feed() {
         .orderBy("timestamp","desc")
         .onSnapshot(snapshot => setPost(snapshot.docs.map((doc)=> ({id:doc.id,data:doc.data()}))))
     }, [])
-      
+    
+    console.log(post);
     return (
         <div className="feed">
             <StoryReel />

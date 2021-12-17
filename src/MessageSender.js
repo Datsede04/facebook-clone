@@ -16,7 +16,7 @@ function MessageSender() {
         e.preventDefault();
 
      db.collection("post").add({
-          messasge :input,
+          message :input,
           timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           profilePic : user.photoURL,
           username: user.displayName,
